@@ -1,0 +1,61 @@
+.education {
+  padding-top: 6.5rem;
+  padding-bottom: 3rem;
+}
+
+.education__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.edu__card {
+  /* border: 2px solid red; */
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 350px;
+  text-align: start;
+  background: var(--color-bg-variant);
+  transition: var(--transition);
+}
+
+.edu__card:hover {
+  border: 2px solid var(--color-primary);
+  background: var(--color-bg);
+  transform: scale(1.1);
+}
+
+.edu__photo {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
+
+.edu__name {
+  margin-top: 0.75rem;
+  font-weight: bold;
+}
+
+.edu__name:hover {
+  color: var(--color-primary-variant);
+}
+
+.edu__cgpa {
+  margin-top: 0.5rem;
+  color: var(--color-primary);
+}
+
+.edu__address {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.address__icon {
+  color: var(--color-white);
+}

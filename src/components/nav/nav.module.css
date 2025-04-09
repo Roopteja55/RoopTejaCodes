@@ -1,0 +1,91 @@
+nav {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: max-content;
+    margin-top: 2rem;
+    padding: 0.7rem 1.7rem;
+    display: block;
+    z-index: 2;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    /* bottom: 2rem; */
+    top: 0;
+    display: flex;
+    gap: 0.8rem;
+    border-radius: 3rem;
+    backdrop-filter: blur(16px);
+
+}
+
+nav a {
+    background: transparent;
+    padding: 0.9rem;
+    border-radius: 50%;
+    display: flex;
+    color: var(--color-light);
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    background: rgba(232, 140, 27, 0.3);
+}
+
+nav a.active {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+
+
+.menu_icon {
+  display: none;
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 20;
+  font-size: 2rem;
+  color: var(--color-white);
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+/* Highlight when menu is open */
+.active_icon {
+  /* background-color: var(--color-primary); */
+  color: var(--color-primary);
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .menu_icon {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 4rem;
+    right: 1rem;      /* 👈 Aligns to right */
+    left: auto;       /* 👈 Prevents centering */
+    transform: none;  /* 👈 Removes centering transform */
+    background-color: var(--color-bg-variant);
+    border-radius: 1.5rem;
+    padding: 1rem;
+    gap: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+
+  .nav.show {
+    display: flex;
+  }
+
+  .nav a {
+    font-size: 1.3rem;
+    padding: 1rem;
+  }
+  
+}

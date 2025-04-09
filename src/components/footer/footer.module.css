@@ -1,0 +1,142 @@
+.footer {
+  background: var(--color-primary);
+  /* border: 2px solid red; */
+  /* border-radius: 20px; */
+  /* padding: 2rem; */
+  text-align: center;
+  color: var(--color-bg);
+}
+
+.footer_logo {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  display: inline-block;
+  color: var(--color-bg);
+}
+
+/* .footer_logo::after {
+  content: "";
+  height: 2px;
+  width: var(--container-width-lg);
+  background: var(--color-bg);
+} */
+
+.horizontal_line {
+  width: 100%;
+  max-width: var(--container-width-lg);
+  height: 2px;
+  background: var(--color-bg);
+  margin: 0 auto;
+}
+
+.footer_links_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  color: var(--color-bg);
+}
+
+.permaLinks {
+  list-style: none;
+  padding: 1rem;
+  /* border: 2px solid red; */
+  /* border-radius: 20px; */
+}
+
+.permaLinks li {
+  margin: 0.5rem 0;
+  transition: var(--transition);
+}
+
+.permaLinks a {
+  text-decoration: none;
+  /* color: red; */
+  font-weight: 500;
+  /* transition: var(--transition); */
+}
+
+.permaLinks li:hover {
+  color: var(--color-white);
+  transform: scale(1.2);
+}
+
+.footer_socials {
+  display: flex;
+  /* flex-direction: column; */
+  gap: 1rem;
+  padding: 1rem;
+  /* border: 2px solid red; */
+  border-radius: 20px;
+}
+
+.footer_socials a {
+  color: var(--color-bg);
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+
+.footer_socials a:hover {
+  color: var(--color-white);
+  transform: scale(1.2);
+}
+
+.vertical_line {
+  width: 2px;
+  height: 150px;
+  background-color: var(--color-bg);
+}
+
+.footer_copyrights {
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: var(--color-bg);
+}
+
+
+
+/* ========== Desktop (Above 768px) ========== */
+@media screen and (min-width: 769px) {
+  .footer_links_container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .vertical_line {
+    display: block;
+  }
+
+  /* .footer_socials {
+    flex-direction: column;
+    align-items: center;
+  } */
+}
+
+/* ========== Mobile (768px and below) ========== */
+@media screen and (max-width: 768px) {
+  .footer_links_container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .vertical_line {
+    display: none;
+  }
+
+  .footer_socials {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .permaLinks {
+    text-align: center;
+  }
+}
